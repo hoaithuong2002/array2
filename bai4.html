@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count</title>
+</head>
+<body>
+<button onclick="countWord()">Count</button>
+<p id="result"></p>
+<script>
+    let a = '';
+    a = prompt('Nhập ');
+    function countWord() {
+        let count = 0;
+        if (a[0] != ' ') {
+            count =1;
+        }
+        for (let i = 0; i < a.length-1; i++) {
+            if ((a[i] === " ") && ([i+1] !== " ") ) {
+                count ++;
+            }
+        }
+        document.getElementById('result').innerHTML = ('Có '+count+' từ');
+    }
+</script>
+</body>
+</html
